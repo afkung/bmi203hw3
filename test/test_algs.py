@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import copy
-import randomx
+import random
 from bmi203hw3 import algs
 
 	
