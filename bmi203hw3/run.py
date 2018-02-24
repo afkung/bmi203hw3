@@ -1,14 +1,16 @@
 """
 Andrew Kung
 BMI203 HW #3
-Answering questions using the Smith-Waterman algorithm
+Answering questions using the Smith-Waterman algorithm, uncomment out individual parts to run
 Last modified: 2/23/18
 """
 
+# importing useful libraries
 import numpy as np
 import matplotlib.pyplot as plt
-import math
-import .algs
+import copy
+import random
+
 
 def run_stuff():
 
@@ -49,6 +51,7 @@ def run_stuff():
 		rocCurve(np.arange(0.0,1.0,0.02),roc_values, matrix)
 	"""
 
+
 	"""
 	# 1-3 Changing Scores
 	open_penalty = 6 # penalties from Part 1
@@ -61,11 +64,8 @@ def run_stuff():
 	rocCurve(np.arange(0.0,1.0,0.02),roc_values, "BLOSUM50 Norm")
 	"""
 
-	# 2-1 Optimization Functions
 
-
-
-
+	"""
 	# 2-2 Optimizing Best scoring matrix using above functions
 	open_penalty = 6 # penalties from Part 1
 	extend_penalty = 3
@@ -89,7 +89,7 @@ def run_stuff():
 		roc_values_opt.append(1-findFP(FP_threshold, pos_opt, neg_opt))
 	rocCurve(np.arange(0.0,1.0,0.02),roc_values_orig, "Original BLOSUM50")
 	rocCurve(np.arange(0.0,1.0,0.02),roc_values_opt, "Optimized BLOSUM50")
-
+	"""
 
 
 	"""
@@ -109,5 +109,4 @@ def run_stuff():
 		opt_roc_values.append(findFP(FP_threshold, optimized_matrix))
 	rocCurve(np.arange(0.0,1.0,0.02),roc_values, "MATIO Classic")
 	rocCurve(np.arange(0.0,1.0,0.02),opt_roc_values, "New MATIO")
-
-"""
+	"""

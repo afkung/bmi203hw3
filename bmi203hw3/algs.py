@@ -47,7 +47,6 @@ def loadSequence(file_path):
 # fillTable: function to fill out alignment table using Smith-Waterman algorithm
 # input: seq1 and seq2 as strings, scoring matrix as list of lists and index dictionary, gap penalties
 # output: filled out table as list of lists
-
 def fillTable(seq1, seq2, scoring_matrix, index_dict, open_penalty, extend_penalty):
 	table = [[0]*len(seq2) for x in range(len(seq1))]
 	for index1 in range(len(seq1)):
