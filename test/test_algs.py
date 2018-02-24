@@ -1,4 +1,9 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import copy
+import randomx
 from bmi203hw3 import algs
+
 	
 def test_load_matrix():
 	scoring_matrix, index_dict = algs.loadMatrix("PAM100")
